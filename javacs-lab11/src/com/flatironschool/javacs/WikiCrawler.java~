@@ -66,6 +66,7 @@ public class WikiCrawler {
         Elements paragraphs = wf.readWikipedia(url);
         index.indexPage(url, paragraphs);
         queueInternalLinks(paragraphs);
+        System.out.println(queueSize());
         return url;
     }
 
